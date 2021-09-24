@@ -1,0 +1,12 @@
+.Wdate{
+	border:black 1px solid;
+	height:22px;
+	background:#fff url(../images/datebox_arrow.png) no-repeat right;
+	border-radius: 5px 5px 5px 5px;
+}
+.Wdate::-ms-clear{display:none;}
+
+.WdateFmtErr{
+	font-weight:bold;
+	color:red;
+}

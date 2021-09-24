@@ -1,0 +1,239 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ include file="/includes/taglibs.jsp"%>
+<body>
+<form id="proceeds_add_check" method="post" data-options="novalidate:true" class="easyui-form" enctype="multipart/form-data">
+<div class="window-div">
+		<div class="window-left-div" style="width:765px;height: 491px;border: 1px solid #D9E3E7;margin-top: 20px;">
+			<div class="win-left-top-div">
+				<input type="hidden" name="contId" id="dispute_fcId" value="${bean.fcId}"/>
+	    		<input type="hidden" name="fFlowStauts" id="dispute_fFlowStauts" value="${bean.fFlowStauts}"/>
+	    		<input type="hidden" name="fContStauts" id="dispute_fContStauts" value="${bean.fContStauts}"/>
+	    		<input type="hidden" name="fUserName" id="dispute_fUserName" value="${bean.fUserName}"/>
+	    		<input type="hidden" name="fUserCode" id="dispute_fUserCode" value="${bean.fUserCode}"/>
+	    		<input type="hidden" name="fOperatorId" id="F_fOperatorId" value="${bean.fOperatorId}"/>
+	    		<input type="hidden" name="isSame" id="isSame" value="${contBean.isSame}"/>
+	    		<input type="hidden"  id="checkName" value="${signInfo.fSignName}"/>
+	    		<input type="hidden"  id="checkBank" value="${signInfo.fBankName}"/>
+	    		<input type="hidden"  id="checkBankCard" value="${signInfo.fCardNo}"/>
+				<input hidden="hidden" id="F_stauts" name ="stauts">
+				<input hidden="hidden" id="F_flowStauts" name ="flowStauts">
+				<input hidden="hidden" value="${contBean.payId}" name="payId">
+				<input type="hidden" name="payCode" id="F_payCodeId" value="${contBean.payCode}"/>
+				<input type="hidden" name="fContId" id="fContId" value="${payBean.fContId}"/>
+				<input type="hidden" name="fPId" id="fPId" value="${payBean.fPId}"/>
+				<!-- 收款人信息id --><input type="hidden" name="pId" value="${payee.pId}" />
+				<!-- 付款方式 --><input type="hidden" name="paymentType" value="${payee.paymentType}" id="paymentType"/>
+				<input type="hidden" id="hbank" name="bank" value="${payee.bank}"  /><!-- 开户行 -->
+				<input type="hidden" id="hbankAccount" name="bankAccount" value="${payee.bankAccount}" /><!-- 银行账户 -->
+				<input type="hidden" id="hpayeeName" name="payeeName" value="${payee.payeeName}" /><!-- 收款人 -->
+				<input type="hidden" id="json1" name="form1" />
+				<!-- 下环节处理人名称 --><input type="hidden" id="input_userName2" name="userName2" value="${contBean.userName2}"/>
+				<!-- 下节点节点编码 --><input type="hidden" name="nCode" value="${contBean.nCode}" />
+				<!-- 审批结果 -->
+		    	<input type="hidden" name="fcheckResult" id="fcheckResult" value=""/>
+		    	<!-- 审批意见 -->
+				 <input type="hidden" name="fcheckRemake" id="fcheckRemake" value=""/>
+				 <!-- 审批附件 -->
+				 <input type="hidden" name="spjlFile" id="spjlFile" value=""/>
+	    		<div class="easyui-accordion" style="margin-left: 20px;margin-right: 20px;">
+					<div title="收款信息" data-options=" collapsible:false" style="overflow:auto;">
+						<table class="window-table" cellspacing="0" cellpadding="0" style="margin-top: 3px;width:707px;">
+									<tr class="trbody">
+										<td class="td1"><span class="style1">*</span>&nbsp;收款性质</td>
+										<td class="td2">
+											<input id="fProceedsProperty"  class="easyui-textbox" readonly="readonly"  name="" style="width: 200px;height: 30px"
+											value="${payBean.fProceedsProperty}"/>
+										</td>
+										
+										<td class="td1"><span class="style1">*</span>&nbsp;收款条件</td>
+										<td class="td2">
+											<input id="fProceedsCondition"  class="easyui-textbox" readonly="readonly" required="required"  name="" style="width: 200px;height: 30px" value="${payBean.fProceedsCondition}"/>
+										</td>
+									</tr>
+								
+									<tr class="trbody">
+										<td class="td1"><span class="style1">*</span>&nbsp;计划收款金额</td>
+										<td class="td2">
+											<input  class="easyui-textbox" readonly="readonly" required="required" name="fReceAmount" style="width: 200px;height: 30px" value="${payBean.fProceedsAmount}"/>
+										</td>
+										<td class="td1"><span class="style1">*</span>&nbsp;计划收款日期</td>
+										<td class="td2">
+											<input  class="easyui-datebox" readonly="readonly" required="required" name="" style="width: 200px;height: 30px" value="${payBean.fProceedsTime}"/>
+										</td>
+									</tr>
+									 <tr class="trbody">
+										<td class="td1"><span class="style1">*</span>&nbsp;实际收款金额</td>
+										<td class="td2">
+											<input  class="easyui-numberbox" readonly="readonly" required="required" id="fReAmount" name="fReAmount" data-options="icons: [{iconCls:'icon-yuan'}],precision:0" style="width: 200px;height: 30px" value="${contBean.fReAmount}"/>
+										</td>
+									</tr> 
+									<tr class="trbody">
+										<td class="td1"><span class="style1">*</span>&nbsp;申请部门</td>
+										<td class="td2">
+											<input  class="easyui-textbox" readonly="readonly" required="required" name="" style="width: 200px;height: 30px" value="${bean.fDeptName}"/>
+										</td>
+										<td class="td1"><span class="style1">*</span>&nbsp;申请人</td>
+										<td class="td2">
+											<input  class="easyui-textbox" readonly="readonly" required="required"  style="width: 200px;height: 30px" value="${bean.fOperator}"/>
+										</td>
+									</tr>
+									
+									<tr style="height: 70px;">
+										<td class="td1"><span class="style1">*</span>合同收款依据及情况说明</td>
+										<td colspan="4">
+											<input class="easyui-textbox" readonly="readonly" required="required" id="remarks" name="remarks" data-options="multiline:true,validType:'length[0,200]',validType:'invalid'"  style="width:538px;height:70px" value="${contBean.remarks}"/>
+										</td>
+									</tr>
+								</table>
+							</div>				
+						</div>	
+					</form>
+					<%-- <div class="easyui-accordion" style="margin-left: 20px;margin-right: 20px;">
+					  	<div title="发票信息" data-options="collapsible:false"
+						style="overflow:auto;">
+							<c:if test="${openType=='add'}">		
+							<div style="overflow:hidden;margin-top: 0px">
+								<!-- 新增 -->
+								<jsp:include page="enforcing_mingxi.jsp" />
+							</div>
+							</c:if>
+							<c:if test="${openType=='edit'}">		
+							<div style="overflow:hidden;margin-top: 0px">
+								<!--修改 -->
+								<jsp:include page="enforcing_mingxi_edit.jsp" />
+							</div>
+							</c:if>
+						</div>
+					</div> --%>	
+					<!-- 收款人信息 -->
+					<%-- <div class="easyui-accordion" style="margin-left: 20px;margin-right: 20px;">
+					  	<div title="收款人信息" data-options="collapsible:false"
+						style="overflow:auto;">
+						<jsp:include page="payee-info.jsp" />
+					</div>
+					</div> --%>
+					<!-- 附件信息 -->
+			<div class="easyui-accordion" style="margin-left: 20px;margin-right: 20px;width:717px;">
+			<div title="附件信息" data-options="collapsible:false" style="overflow:auto;">		
+				<table class="window-table" cellspacing="0" cellpadding="0" style="margin-top: 3px;width:707px;">
+					<tr class="trbody">
+							<td class="td1" style="width:55px;">附件</td>
+							<td colspan="4">
+							<c:if test="${!empty attaList}">
+								<c:forEach items="${attaList}" var="att">
+								<c:if test="${att.serviceType=='file'}">
+									<a href='${base}/attachment/download/${att.id}' style="color: #666666;font-weight: bold;">${att.originalName}</a><br>
+								</c:if>	
+								</c:forEach>
+							</c:if>
+							<c:if test="${empty attaList}">
+								<span style="color:#999999">暂未上传附件</span>
+							</c:if>
+							</td>
+						</tr>
+				</table>
+			</div>
+			</div>
+					</div>
+					
+			  <div class="window-left-bottom-div" >
+				<a href="javascript:void(0)" onclick="openCheckWin('审批意见','1')">
+					<img src="${base}/resource-modality/${themenurl}/button/tg1.png" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)">
+				</a>&nbsp;&nbsp;
+				<a href="javascript:void(0)" onclick="openCheckWin('审批意见','0')">
+					<img src="${base}/resource-modality/${themenurl}/button/btg1.png" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)">
+				</a>&nbsp;&nbsp;
+				<a href="javascript:void(0)" onclick="closeWindow()">
+					<img src="${base}/resource-modality/${themenurl}/button/guanbi1.png" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)">
+				</a>&nbsp;&nbsp;
+				<%-- <a href="${base }/systemcentergl/list?typeStr=支出管理" target="blank">
+					<img src="${base}/resource-modality/${themenurl}/button/xgzd1.png" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)">
+				</a> --%>
+			</div>
+		</div>
+	
+		<div class="window-right-div" id="check_system_div" style="width:254px;height: 591px">
+			<jsp:include page="../../check_system.jsp" />
+		</div>
+	</div>
+
+<script type="text/javascript">
+	
+flashtab('contract-enforcing-add');	
+	
+//审批
+function check(result) {
+	$("#fcheckResult").val(result);
+	$('#proceeds_add_check').form('submit', {
+		onSubmit : function() {
+			flag = $(this).form('enableValidation').form('validate');
+			if (flag) {
+				$.messager.progress();
+			}
+			return flag;
+		},
+		url : base + '/proceedsPlan/proCheckResult',
+		success : function(data) {
+			if (flag) {
+				$.messager.progress('close');
+			}
+			data = eval("(" + data + ")");
+			if (data.success) {
+				$.messager.alert('系统提示', data.info, 'info');
+				$('#contract_reimburse_check_form').form('clear');
+				$('#ContractRevenueTab').datagrid('reload'); 
+				$("#indexdb").datagrid('reload');
+				closeWindow();
+			} else {
+				$.messager.alert('系统提示', data.info, 'error');
+				closeWindow();
+				$('#contract_reimburse_check_form').form('clear');
+			}
+		}
+	});
+}
+	
+		function fPurchNo_DC(){
+			//var node=$('#c_c_dg').datagrid('getSelected');
+			var win=creatFirstWin('选择-采购订单号',750,550,'icon-add','/PurchaseApply/PurchNoList');
+			win.window('open');
+		}
+		function quota_DC(){
+			//var node=$('#c_c_dg').datagrid('getSelected');
+			var win=creatFirstWin('选择-预算指标编号',750,550,'icon-add','/BudgetIndexMgr/contract_list');
+			win.window('open');
+		}
+		var c =0;
+		function upt_upFile() {
+			/* console.log(document.getElementById("upt_fFileSrc1"));
+			var src = getFilePath();
+			alert(getFilePath()); */
+			c ++;
+			var src = $('#upt_fFileSrc1').val();
+			/* var srcs =src+','+$('#upt_fi1').val();
+			$('#upt_fi1').val(srcs); */
+			$('#upt__f1').append("<div id='c"+c+"'><a href='#' class='file_U' style='color: #3f7f7f;font-weight: bold;'>"+src+"</a>&nbsp;&nbsp;&nbsp;&nbsp;<a style='color: red;' href='#' onclick='deleteF1(c"+c+")'>删除</a></div>");
+		} 
+		function deleteF1(val){
+			var child=document.getElementById(val.id);
+			child.parentNode.removeChild(child);
+		}
+		//时间格式化
+		function ChangeDateFormat(val) {
+			//alert(val)
+			var t, y, m, d, h, i, s;
+			if (val == null) {
+				return "";
+			}
+			t = new Date(val)
+			y = t.getFullYear();
+			m = t.getMonth() + 1;
+			d = t.getDate();
+			h = t.getHours();
+			i = t.getMinutes();
+			s = t.getSeconds();
+			// 可根据需要在这里定义时间格式  
+			return y + '-' + (m < 10 ? '0' + m : m) + '-' + (d < 10 ? '0' + d : d);
+		}
+	</script>
+</body>

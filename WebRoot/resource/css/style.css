@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+html {
+	min-height: 100%;
+	position: relative
+}
+
+body {
+	padding-bottom: 0;
+	/*background-color: #e4e6e9;*/
+	background-color: #ffffff;
+	min-height: 100%;
+	font-family: 'Open Sans';
+	font-size: 12px;
+	color: #393939;
+	line-height: 1.5
+}
+.easyui-linkbutton{/* height: 22px; */text-align: center;line-height: 22px;}
+.a_table th{
+	font-weight: normal;text-align: right;font-size: 14px;height: 30px;
+}
+.a_search_table th{
+	font-weight: normal;text-align: right;font-size: 14px;height: 30px;border-right: none;
+}
+.a_table td,.a_search_table td{
+	font-size: 14px;
+}
+.main_table{
+	font-size: 14px;
+	width: 100%;
+}
+.main_table th{
+	font-weight: normal;
+	text-align: right;
+	background-color: #d6e7ff;
+	border-bottom: 1px solid #c4d9ec;
+	border-right: 1px solid #c4d9ec;
+	padding: 7px;
+	color: #00307b;
+}
+.main_table td{
+	padding: 7px;
+	font-weight: normal;
+	text-align: left;
+	border-bottom: 1px solid #c4d9ec;
+	color: #00307b;
+}
+.view_table{
+	font-size: 14px;
+	width: 100%;
+}
+.view_table th{
+	font-weight: normal;
+	text-align: center;
+	background-color: #ECF3FF;
+	border-bottom: 1px solid #95B8E7;
+	border-right: 1px solid #95B8E7;
+	padding: 5px;
+}
+.view_table td{
+	padding: 5px;
+	font-weight: normal;
+	text-align: center;
+	border-bottom: 1px solid #95B8E7;
+	border-right: 1px solid #95B8E7;
+}
+.south{
+	text-align: center;padding: 5px;
+}
+input[type='submit']{height: 28px;width: 60px;}
+.tabs-panels{
+	padding: 2px 2px 2px 2px;
+}
+.x_top{ height:79px; background:url(../images/x_top_bg.jpg) repeat-x left top;}
+.x_top_in{background:url(../images/x_top.jpg) no-repeat left top;height:35px; text-align:right; padding-right:40px; padding-top:43px;_padding-top:60px; color:#0c1f2b;vertical-align: middle;}
+.x_top_in span,.x_top_in span a{ color:#e51c1f; text-decoration:underline;}
+.x_top_in span a:hover{ color:#C00}
+.exit,.exit:hover{ color:#0913f6; text-decoration:underline;}
+
+.datagrid-empty{
+	color: red;
+	font-size: 16px;
+	border:1px solid #ccc;
+}
+.numberbox .textbox-text{
+	text-align: left;
+}
+.my_btn_style{
+	cursor:pointer;
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #ffffff 0px, #eeeeee 100%) repeat-x scroll 0 0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    color: #444;
+    height: 22px;
+}
+.span_input_style{
+    padding-left:4px;
+}
+.my_input_style{
+    border: 1px solid #95b8e7;
+    border-radius: 5px;
+    pdding:1px;
+    font-size:14px;
+}
+.accordion_bg{
+	overflow:auto;
+	
+}
+.rylb_tag_style{
+   height:25px;
+   line-height:25px; 
+   display: inline-block;
+   padding:0px 5px 0px 5px;
+   border-radius:7px;
+}

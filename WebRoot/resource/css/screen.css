@@ -1,0 +1,57 @@
+@media screen and (max-width: 1002px){
+	.title_nav_txt li{width:19%;}
+	.column_search_2{ width:45%;}
+	.column_search_2 dd input.input_2{ width:60%;}
+	.list dl dd,.zxzj dd{ width:70%;width:60%\0;}
+	.skhfqright .zxzj dd{width: 66%;}
+	.jg_leader li{ margin:0 1.5% 15px;}
+	.jg_zsdw a{ width:33.2%;}
+	.table_1 tr td p .input{ width:28.5%}
+	.table_1 tr td p textarea{width:60%;}
+	.tabtit_in_2 ul li{width:23%;}
+	.hotnew{ width:205px;}
+	.home_cypt{ width:23%;}
+	.ztzl_shaixuan_c p{ width:75%;}
+	.hyfw_l div{ width:78%;}
+	.hyfw_l div p input.input_2{ width:40%;}
+	.ztzl_shaixuan_c p input.input_2{ width:50%;}
+	.hyfw_img span{ margin-left:0;}
+	.zfxxgk{width: 31%}
+
+}
+
+@media screen and  (min-width: 1003px) and (max-width: 1280px){
+	.title_nav_txt li{width:19%;}
+	.list dl dd,.zxzj dd{ width:72%;}
+	.skhfqright .zxzj dd{width: 66%;}
+	.jg_leader li{ margin:0 0.5% 15px;}
+	.table_1 tr td p .input{ width:40%}
+	.tabtit_in_2 ul li{width:23.5%;}
+	.hotnew{ width:34%;}
+	.home_cypt{ width:26%;}
+	.hyfw_l div{ width:78%;}
+	.hyfw_l div p input.input_2{ width:45%;}
+	.zfxxgk{width: 31.8%}
+
+}
+@media screen and  (min-width: 1281px) and (max-width: 1440px){
+	.title_nav_txt li{ margin:0 0.3% 5px 0.3%;}
+	.list dl dd,.zxzj dd{ width:78%;}
+	.skhfqright .zxzj dd{width: 74%;}
+	.jg_leader li{ margin:0 1.6% 15px;}
+	.table_1 tr td p .input{ width:50%}
+	.hotnew{ width:31%;}
+	.home_cypt{ width:22.8%;}
+}
+
+@media screen and  (min-width: 1441px) and (max-width: 1680px){
+	.list dl dd,.zxzj dd{ width:80%;}
+	.table_1 tr td p .input{ width:55%}
+	.home_cypt{ width:33%;}
+	.hotnew{ width:54%;}
+
+}
+@media screen and  (min-width: 1681px) and (max-width: 1919px){
+	.hotnew{ width:58%;}
+	.home_cypt{ width:35%;}
+}

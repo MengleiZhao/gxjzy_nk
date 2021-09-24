@@ -1,0 +1,19 @@
+body{font-family: 微软雅黑;background: #cccccc;}
+
+.sidebar{width: 345px;background: #fff;height: 100%;position: relative;}
+.sidebar .sidebar_cont{margin: 0 5px 0 0;}
+.sidebar .sidebar_cont_tit{height: 30px;line-height: 30px;background: #d0e7f9;font-size: 16px;color: #4c9edd;font-weight: bold;}
+.sidebar .sidebar_cont_tit span{padding-left: 20px;}
+.sidebar .sidebar_cont ul{}
+.sidebar .sidebar_cont ul .lt{border-bottom: 1px dotted #a2a2a2;line-height: 43px;height: 43px;margin: 0 29px 0 19px;font-size: 14px;color: #7b7b7b;}
+.sidebar .sidebar_cont ul .lt input{margin-right: 10px;}
+
+.search{height: 36px;line-height: 36px;border: 1px solid #cdcdcd;position: absolute;bottom: 15px;width: 295px;margin: 0 0 0 5px;border-radius: 4px;background:url(../images/search-01.png) 10px 10px no-repeat;}
+.search input{width: 165px;margin-left: 30px;height: 31px;line-height: 31px;border:none;background: none;font-family: 微软雅黑;}
+.search a{display: inline-block;width: 82px;height: 33px;background: #4589f0;text-align: center;color: #fff;border-radius: 5px;margin: 2px 0 0 9px;}
+.search a:hover{color: #fff;text-decoration: none;}
+
+.second{}
+.second ol{display: none;}
+.second ol li{border-bottom: 1px dotted #a2a2a2;line-height: 43px;height: 43px;margin: 0 29px 0 19px;font-size: 14px;color: #7b7b7b;padding-left: 20px;font-size: 12px;}
+.second ol li input{margin: 0 6px 0 0;}

@@ -1,0 +1,11 @@
+body{width:100%;margin:0; background: #406dbf url(../images/bg.jpg) top center no-repeat;}
+.main{ width:757px; margin:0 auto; padding-top:120px;}
+.tit{background: url(../images/login-tit.png) no-repeat center top; margin:0 auto;width:757px; height:76px;}
+.login{background: url(../images/login-bg.png) no-repeat top center; width:592px; height:212px; margin:0 auto; padding-top:45px;}
+.user{width: 55px;color: #575656;font: "微软雅黑";font-size: 16px;margin:0  17px 15px 124px;line-height: 40px; padding-top:2px;float: left;clear: both;font-weight: bold; letter-spacing:1px;text-align:left;}
+.name,.password{ width:265px; float:left;margin-bottom:15px;}
+.name input,.password input{width:252px; height:38px;padding-left:15px;border-radius:4px;border:1px solid #bcbcbc; line-height:38px; color:#999;}
+.reb-check{font-size:12px;color:#4c5d74;margin-top:25px; padding-left:196px;width:80px;font:"宋体"; float:left; height:30px;line-height:20px;}
+.reb-check input{ margin-bottom:-6px;*margin-bottom:-2px;}
+.btn{padding-top:15px;padding-left:68px;float:left;}
+.btn input{cursor:pointer;}

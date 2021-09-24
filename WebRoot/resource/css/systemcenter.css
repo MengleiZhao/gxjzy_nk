@@ -1,0 +1,136 @@
+.bigDiv{
+	width: 90%;
+	margin: 0 auto;
+	color:#666666;
+	font-size: 14px;
+}
+.titleDiv{
+	width: 100%;
+	height: 50px; 
+	padding-top:50px; 
+	text-align: center;
+	border-bottom:2px solid #929292; 
+	font-size: 26px;
+	color: #666666";
+}
+.system_center{
+	width: 96%;
+	margin: 0 auto;
+	padding-top: 20px; 
+	overflow: hidden;"
+}
+.searchDiv{
+	 text-align: center;
+	 height:22px;
+	 border-bottom:1px solid #D9E3E7;
+	 padding-top: 2px;
+	 color:#666666;
+	 font-weight: bold;
+	 font-size:14px;"
+}
+.system_tab1{
+	 width:100%;
+	 height: 100%;
+}
+.system_tab2{
+	width: 100%;
+	table-layout:fixed;
+	margin:0px;
+	padding:0px;
+	/* border:1px solid red; */
+}
+.system_tab2_td{
+	  /* border:1px solid #000; */
+	  width: 16.7%;
+	  height: 205px;
+}
+.tab2_div{
+ 	margin:0 auto;
+	/*  margin-left:10px; */
+	background-color:#fff;
+	border-radius:6px;
+	cursor:pointer;
+	 width: 140px; 
+	 height: 180px;
+	 border:1px solid #D9E3E7;
+	  -webkit-transform: perspective(1px) translateZ(0);
+	  transform: perspective(1px) translateZ(0);
+	  -webkit-transition-duration: 0.3s;
+	  transition-duration: 0.3s;
+	  -webkit-transition-property: transform;
+	  transition-property: transform;
+	  -webkit-transition-timing-function: ease-out;
+	  transition-timing-function: ease-out; 
+}
+.tab2_div:hover{
+	/* margin-top:8px; */
+	box-shadow: 2px 2px 2px #DBDBDB;
+	 -webkit-transform: translateY(-6px);
+  	transform: translateY(-6px); 
+}
+/* .tab2_div:hover .div_top{
+	background-color:#A0C1FF;
+} */
+.div_top{
+	width:100%;
+	height: 12px;
+	border-top-left-radius:5px; 
+	border-top-right-radius:5px;
+	background-color:#E2ECFF;
+}
+.div_center1{
+	height: 76px;
+	width: 96px;
+	padding-top:28px;
+	margin: 0 auto;
+	font-weight:bold;
+	font-size:14px;
+	color:#666666;
+	text-align:center;
+	 /* border:1px solid green;  */
+}
+.div_center2{
+	height: 44px;
+	font-size:12px;
+	text-align:center;
+	color:#CCCCCD;
+	/*  border:1px solid blue; */
+}
+.div_bottom{
+	height: 18px;
+	color:#CCCCCD;
+	font-size:10px;
+	margin:0px;
+	padding:0px;
+	/* border:1px solid red; */
+}
+.div_bottom_div{
+	float: right;
+	padding-right: 6px;
+}
+ /*µ¯³ö²ã*/
+/* #popBox {
+    display: none;
+	border:1px solid #CBCBCB;
+	box-shadow: 0px 3px 6px #C3C3C3;
+    background-color: #FFFFFF;
+    z-index: 11;
+    width: 450px;
+    height: 130px;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    margin:auto;
+}
+
+#popBox .close{
+    text-align: right;
+    margin-right: 5px;
+}
+
+¹Ø±Õ°´Å¥
+#popBox .close a {
+    text-decoration: none;
+    color: #2D2C3B;
+} */

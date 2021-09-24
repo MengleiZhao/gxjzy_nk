@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="cn_zzww" default="package" basedir=".">
+	
+	<property name="myworkspace.dir" value="D:/myworkspace"/>
+	
+	<tstamp>
+    	<format property="TODAY" pattern="yyyyMMdd" locale="ZH_CN"/>
+  	</tstamp>
+	
+	<target name="package">
+		<zip zipfile="${myworkspace.dir}/cn_zzww_${TODAY}.zip">
+			<fileset dir="${myworkspace.dir}/cn_zzww">
+				<exclude name=".svn"/>
+			</fileset>
+		</zip>
+	</target>
+
+</project>

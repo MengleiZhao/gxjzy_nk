@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//WebRoot/WEB-INF/config/activiti.properties=UTF-8
+encoding//WebRoot/resource/office/main.js=GBK
+encoding//WebRoot/resource/steps/iF.step.css=UTF-8
+encoding//WebRoot/resource/ui/themes/default/easyui-new.css=UTF-8
+encoding//WebRoot/resource/ui/themes/default/easyui.css=UTF-8
+encoding//src/com/braker/common/ftp/FileUpload.java=UTF-8
+encoding//src/other_jdbc.properties=UTF-8
+encoding/<project>=UTF-8

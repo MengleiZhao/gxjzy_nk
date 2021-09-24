@@ -1,0 +1,64 @@
+package com.braker.icontrol.budget.project.manager;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.List;
+
+import com.braker.common.entity.DataEntity;
+import com.braker.common.hibernate.BaseManager;
+import com.braker.core.model.User;
+import com.braker.icontrol.budget.project.entity.TMediuLongTermGoalsOut;
+import com.braker.icontrol.budget.project.entity.TProBasicInfo;
+import com.braker.icontrol.budget.project.entity.TYearTermGoals;
+import com.braker.icontrol.budget.project.entity.TYearTermGoalsOut;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+
+public interface TYearTermGoalsOutMng extends BaseManager<TYearTermGoalsOut>{
+
+	/**
+	 * 保存年度指标信息
+	 * @param project
+	 * @param user
+	 * @param list
+	 */
+	public void saveYearIndexByProject(TProBasicInfo project, User user,List<TYearTermGoalsOut> indexList);
+	
+	/**
+	 * 保存年度指标信息
+	 * @param project
+	 * @param user
+	 * @param yearIndexJson
+	 * @throws IOException 
+	 * @throws JsonMappingException 
+	 * @throws JsonParseException 
+	 * @throws ParseException 
+	 */
+	public void saveYearIndexByProject(TProBasicInfo project, User user, String yearIndexJson) throws JsonParseException, JsonMappingException, IOException, ParseException;
+	
+	/**
+	 * 解析数据集合生成年度指标集合
+	 * @param dataList 数据集合
+	 * @return
+	 * @throws ParseException 
+	 */
+	public List<TYearTermGoalsOut> generateYearIndexFromDataEntity(List<DataEntity> dataList) throws ParseException;
+	
+	/**
+	 * 获得某项目某年的所有年度指标
+	 * @param proId 项目id
+	 * @param year 年度
+	 * @return
+	 */
+	public List<TYearTermGoalsOut> getGoalOutByPro(String proId, String year);
+
+	/**
+	 * 删除某项目的某年度指标
+	 * @param proId 项目id
+	 * @return editList 不能删除的目标列表
+	 */
+	public void deleteGoalOutByProject(Integer fProId, List<TYearTermGoalsOut> editList, String year);
+
+
+
+}

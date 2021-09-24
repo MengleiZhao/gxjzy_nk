@@ -1,0 +1,129 @@
+/** {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}*/
+		
+		/*a,
+		img {
+			border: 0;
+		}*/
+		#appren2{
+			color: #2A84FF;
+		    font-weight: 500;
+		    font-size: 15px;
+		    margin-left: 0.2rem;
+		}
+		#approver{
+			box-shadow: 0 0px 0px rgba(0,0,0,.3);
+			height: 1.3rem;;
+			border: none;
+			padding-top: 0px;
+			border-radius: 0;
+		}
+		#f_time{
+			position: absolute;
+		    right: -30%;
+		    margin-top: 0px;
+		    color: #999999;
+		    font-size: 14px;
+		}
+		body {
+			background: #f2f2f2;
+			/*font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";*/
+		}
+		/* stepInfo */
+		
+		.stepInfo {
+			position: relative;
+			background: #FFFFFF;
+			margin: 0px auto auto 45px;
+			height: 1.4rem;
+			/*margin: 0;
+			padding: 0;
+			list-style-type: none;*/
+		}
+		
+		.stepInfo ul {
+			/*float: left;*/
+			height: 100%;
+			width: 0.05rem;;
+			background: #45a0f3;
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		
+		.stepIco {
+			/*圆形显示*/
+			border-radius: 2.4rem;
+			padding: 0.2em;
+			background: #008DFF;
+			text-align: center;
+			line-height: 0.6rem;
+			color: #fff;
+			position: absolute;
+			width: 0.7rem;
+			height: 0.7rem;
+			font-size: 14px;
+			/*margin: 0;
+			padding: 0;
+			list-style-type: none;*/
+		}
+		
+		.stepIco1 {
+			left: -0.33rem;
+			/*right: 4rem;*/
+			top: -1%;
+			/*margin: 0;
+			padding: 0;
+			list-style-type: none;*/
+		}	
+		.stepText {
+			color: #666;
+			margin-top: 0.5em;
+			width: 4em;
+			text-align: center;
+			margin-left: -1.4em;
+			/*margin: 0;
+			padding: 0;
+			list-style-type: none;*/
+		}
+		
+		.info {
+			/*信息布局及颜色*/
+			position: absolute;
+			font-size: 15px;
+			color: black;
+			margin: 0 0px 0px 30px;
+			width: 200px;
+			/*color: #45a0f3;*/
+			/*margin: 0;
+			padding: 0;
+			list-style-type: none;*/
+		}
+		
+		.info_1 {
+			top: 2%;
+			/*margin: 0;
+			padding: 0;
+			list-style-type: none;*/
+		}
+		.info_2{
+			top:25%;
+			color: #999999;
+			/*margin: 0;
+			padding: 0;
+			list-style-type: none;*/
+		}
+		.opinion{
+			width: 330px;
+			height: 70px;
+			font-size: 15px;
+			color: black;
+			border: none;
+			margin-left: -10px;
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}

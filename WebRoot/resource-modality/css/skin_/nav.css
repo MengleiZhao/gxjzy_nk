@@ -1,0 +1,46 @@
+#bd{ padding-left:153px;}
+/*左侧栏*/
+.sidebar{ float:left; width:155px; height:100%; margin-left:-155px;background-color: #0170a4;} /*叶修改原来有个position:relative;属性*/
+
+/*页面主体*/
+.main{ position:relative; padding-top:10px;/* background-color: #f0f5f7 */}
+.main .title{ position:relative; border-bottom:1px solid #dce5e9;height:28px; background-color: #ffffff}
+/*更多tab*/
+.main .title .tab-more{display:none;float:left;margin:8px 0 0 5px;width:15px;height:14px;background:url(../../img/skin_/switch-system/tabright.png); cursor:pointer;}
+.main .title .tab-more:hover,.main .tab-more.active{background:url(../../img/skin_/switch-system/tabrighthover.png);}
+.main .title .sidebar-show{ float:left; width:15px; height:25px; background:url(../../img/skin_/toright.png); display:none; cursor:pointer;}
+.tab-close{float:right; width:17px; height:17px; background:url(../../img/skin_/close2.png); cursor:pointer; margin:4px 14px 0 0;}
+.tab-close:hover{ background:url(../../img/skin_/close2.png) -17px 0;}
+.main .tab{ float:left; padding-left:10px;}
+.main .tab li{ float:left; margin-right:4px;}
+.main .tab li a{ display:block; /* border-left:1px solid #d7d7d7; border-right:1px solid #d7d7d7; */ background:url(../../img/skin_/tab1.png) repeat-x;}
+.main .tab li a:hover{ text-decoration:none;}
+.main .tab li.current a{ background:url(../../img/skin_/tab2.png) repeat-x;}
+.main .tab li a span{ float:left; height:28px; line-height:28px;/* width:73px; */text-align:center; color:#666666;padding:0 20px;}
+.main .tab li.current a span{ color:#ffffff;/*  font-weight:bold; */}
+
+.main .tab li a .close-tab{float:left; width:12px; height:12px; background:url(../../img/skin_/close.png); /* margin:9px 3px 0 6px; */}
+.main .tab li.current a .close-tab{}
+/*关闭hover状态*/
+.main .tab li a .close-tab:hover{background:url(../../img/skin_/hoverclose.png);}
+
+/*更多tab样式*/
+.more-bab-list{ display:none;position:absolute;top:39px;left:250px;border-top:1px solid #d7d7d7;}
+.more-bab-list ul{background:#f2f2f2;padding:12px 0;}
+.more-bab-list ul li {cursor:pointer;}
+.more-bab-list ul li i{display:none;position:absolute;width:6px;height:6px;top:12px;right:10px;background:url(../../img/skin_/switch-system/closed.png);}
+.more-bab-list ul li span{position:relative; display:block;padding:6px 30px 6px 20px;}
+.more-bab-list ul li:hover span{ background:#21a6d7;color:#fff;}
+.more-bab-list ul li:hover i{display:block;}
+.more-bab-list ul li i:hover + span{background:#21a6d7;color:#fff;}
+
+.more-bab-list .opt-panel-ml{position:absolute;top:0;bottom:5px;left:-6px;width:6px;background:url(../../img/skin_/switch-system/sleft.png);}
+.more-bab-list .opt-panel-mr{position:absolute;top:0;bottom:5px;right:-6px;width:6px;background:url(../../img/skin_/switch-system/sright.png);}
+.more-bab-list .opt-panel-bc{position:absolute;left:5px;bottom:-9px;right:5px;height:9px;background:url(../../img/skin_/switch-system/sdown.png);}
+.more-bab-list .opt-panel-br{position:absolute;bottom:-9px;right:-6px;width:11px;height:14px;background:url(../../img/skin_/switch-system/yj.png);}
+.more-bab-list .opt-panel-bl{position:absolute;bottom:-9px;left:-6px;width:11px;height:14px;background:url(../../img/skin_/switch-system/yjl.png);}
+
+a.level0{font-size:14px;}
+
+/*树样式*/
+.ztree{*margin-left:-15px;}

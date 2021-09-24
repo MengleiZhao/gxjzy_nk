@@ -1,0 +1,227 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ include file="/includes/taglibs.jsp"%>
+<body>
+<div class="win-div">
+<form id="economicAddEditForm" action="${base}/yearsUnionBasic/subjectSave" method="post" data-options="novalidate:true" class="easyui-form" enctype="multipart/form-data">
+		<input type="hidden" id="funcIds" name="funcIds" value=""/>
+		<input type="hidden" id="pId" name="pId" value="${departId }"/>
+		<input type="hidden" id="deId" name="deId" value="${deId }"/>
+	<div class="easyui-layout" style="height: 509px;">
+		<div class="win-left-div" data-options="region:'west',split:true">
+			<div class="win-left-top-div" style="height: 450px">
+				<div class="easyui-accordion" style="width:662px;margin-left: 20px;">
+					<div title="经济科目" id="djdxqDiv" data-options="iconCls:'icon-xxlb',collapsed:false,collapsible:false" style="overflow:auto;margin-top:10px;">
+						<div data-options="region:'west',split:false"  style="width:200px;" >
+							<ul id="EconomicTrees" class="easyui-tree" data-options="url:'${base}/yearsUnionBasic/economicAddDepartTree?fEjProCode=${fEjProCode }&departId=${departId }',checkbox:true,animate:true,lines:true,onCheck:checkTreeMethods,cascadeCheck:false" ></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="win-left-bottom-div">
+				<a href="javascript:void(0)" onclick="economicAddEditForm()">
+				<img src="${base}/resource-modality/img/button/baocun1.png" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)">
+				</a>&nbsp;&nbsp;
+				<a href="javascript:void(0)" onclick="closeWindow()">
+				<img src="${base}/resource-modality/img/button/guanbi1.png" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)">
+				</a>
+			</div>
+		</div>
+	</div>
+</form>
+</div>
+<script type="text/javascript">
+	
+		function economicAddEditForm(){
+			
+			//将功能树选中的值设置到隐藏文本上
+			var nodes = $('#EconomicTrees').tree('getChecked');
+			var fIds = '';
+			for(var i=0; i<nodes.length;i++){
+				if(nodes[i].code!=null){
+					nodes[i].remove;
+				}else{
+				if (fIds!='') fIds+=',';
+				fIds+= nodes[i].id;
+				}
+			}
+			$('#funcIds').val(fIds);
+			$('#economicAddEditForm').form('submit', {
+   				onSubmit: function(){ 
+   					flag=$(this).form('enableValidation').form('validate');
+   					if(flag){
+   						$.messager.progress();
+   					}
+   					return flag;
+   				}, 
+   				
+   				success:function(data){
+   					if(flag){
+   						$.messager.progress('close');
+   					}
+   					data=eval("("+data+")");
+   					if(data.success){
+   						$.messager.alert('系统提示', data.info, 'info');
+   						closeWindow();
+   						$('#economicAddEditForm').form('clear');
+   						$("#Economic_dg").datagrid('reload'); 
+   					}else{
+   						$.messager.alert('系统提示', data.info, 'error');
+   					}
+   				} 
+   			});		
+		}
+		 var names = new Array();
+			function streetChange(streetCode){
+				$('#userStreetJwh').combobox('reload',"${base}/street/jwh?streetCode="+streetCode);
+			}
+			function departSelect(selectType){
+				var win=creatSearchDataWin('选择-部门',590,400,'icon-add',"/depart/refUserDepart/"+selectType);
+			    win.window('open');
+			} 
+			function departReturnSelect(ret){
+				if (ret == "clear") {
+			       $("#user_depart").html("");
+				}
+
+			    if (ret!="&&&&" && ret != undefined && ret != null && ret.indexOf("&&") != -1 && ret != "cancel") {
+			    	var retArray = ret.split("&&");
+			        var str= new Array(); 
+			       	str=retArray[2].split(","); 
+			       	for(var i=0;i<str.length-1 ;i++){
+			       		if(null!=str[i]){
+			       			var str1= new Array();
+			       			str1=str[i].split(":");
+			       			var div1 = $("#user_depart");
+			       			if(!isUserTreeExist(str1[0]) && !isUserTreeExist(str1[1])){
+								names.push(str1[0]);	
+								div1.html("<div  style='float:left;margin-left:8px;margin-top:8px;' > "+
+											"<input type='hidden' name='depart.id' id='departIds' value='"+str1[0]+"'/>"+
+											"<span title='"+str1[1]+"'>"+((str1[1].length>8)?str1[1].substring(0,8)+"...":str1[1])+"</span>"+
+											"<img src='${base}/resource/images/cancelDepart.jpg' style='cursor:pointer;margin-left:5px;height:15px;width:15px;' onclick = 'cancelUserDepart(this)' title='删除' id='"+str1[0]+"'/>"+
+											"</div>")
+							}
+			       		}
+			       	}
+			    }
+			}
+			function isUserTreeExist(name){
+				for(var i=0; i<names.length; i++){
+					if(names[i] == name){
+						return true;
+					}
+				}
+				return false;
+			}
+			
+			function cancelUserDepart(obj){
+				var id=obj.id;
+				if(names.length>0)
+				{
+					for(i=0; i<names.length; i++){
+						if(names[i] == id){
+							names.splice(i,1);
+						}
+					}
+				}
+				$(obj).parent().remove();
+			}
+			function checkMobileNo(){
+				var mobile=$("#user_edit_mobileNo").textbox("getValue");
+				var id=$("#user_edit_id").val();
+				var tag="0";
+				if(mobile!=''){
+					 $.ajax({
+			  			   type : "post",
+			  			   url : "${base}/user/mobileCheck",
+			  			   data:{"mobileNo":mobile,"id":id},
+			  			   dataType: 'json',  
+						   async: false,
+			  			   success : function(data){
+			  				   if(data.success){ 	
+			  			   	     $.messager.alert('系统提示', "手机号在系统中已存在，请更换手机号！", 'info');
+			  			   	     tag="1";
+			  			   	   }else{
+			  			   		 tag="0"; 
+			  			   	   }  
+			  			   }
+			  		   })
+				}
+				 if(tag=="0"){
+			    	return true; 
+			     }else if(tag=="1"){
+			    	return false; 
+			     }
+			}
+			
+			//获取父节点
+			function getParentNode(parentNode,isFlag){
+				if(isFlag){
+					//设置节点属性为选中
+					parentNode.checkState= "checked";
+					parentNode.checked= true;
+					//设置勾选样式
+					$('#'+parentNode.domId+'').find(".tree-checkbox").removeClass("tree-checkbox0").addClass("tree-checkbox1");
+				}else{
+					//循环父节点下是否有子节点选中
+					forParentCheckMethod(parentNode,isFlag);
+				}
+				parentNode = $('#EconomicTrees').tree('getParent',parentNode.target);
+				if(parentNode!=null){
+					getParentNode(parentNode,isFlag);
+				}
+			}
+			//循环父节点下是否有子节点选中
+			function forParentCheckMethod(parentNode,isFlag){
+				//获取子节点
+				var childRows = $('#EconomicTrees').tree('getChildren',parentNode.target);
+				var state=null;
+				var type=null;
+				var num=0;	//节点选中的数量
+				if(!isFlag){
+					if(childRows!=undefined && childRows.length>0){
+						for(var i=0;i<childRows.length;i++){
+							state=childRows[i].checkState;
+							type=childRows[i].checked;
+							if(state=='checked' && type==true){
+								num++;
+								if(num>1){	//有多个节点选中
+									break;
+								}
+							}
+						}
+						if(num==0){	//没有其它节点选中 ，清除选中样式
+							parentNode.checkState= "unchecked";
+							parentNode.checked= false;
+							$('#'+parentNode.domId+'').find(".tree-checkbox").removeClass("tree-checkbox1").addClass("tree-checkbox0");
+						}
+					}else{
+						$('#'+parentNode.domId+'').find(".tree-checkbox").removeClass("tree-checkbox1").addClass("tree-checkbox0");
+					}
+				}
+			}
+			//循环子节点
+			function forChildrenMethod(isFlag,childRows){
+				if(childRows!=undefined && childRows.length>0){
+					for(var i=0;i<childRows.length;i++){
+						$('#EconomicTrees').tree(isFlag, childRows[i].target);
+					}
+				}
+			}
+			//复选框选中事件
+			function checkTreeMethods(node,checked){
+				var childRen = $('#EconomicTrees').tree("getChildren",node.target);
+				if(childRen.length>0){
+					if(checked){
+						for(var i=0;i<childRen.length;i++){
+							$('#EconomicTrees').tree('check', childRen[i].target);
+						}						
+					}else{
+						for(var i=0;i<childRen.length;i++){
+							$('#EconomicTrees').tree('uncheck', childRen[i].target);
+						}
+					}
+				}
+			}
+	</script>
+</body>

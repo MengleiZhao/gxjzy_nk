@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<jmxConfigurator />
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%date{yyyy-MM-dd hh:mm} %-5level %logger{10} - %msg%n</pattern>
+		</layout>
+	</appender>
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">    
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">    
+       		<fileNamePattern>d:/hpzz_log/hpzz-%d{yyyy-MM-dd}.log</fileNamePattern>    
+       		<maxHistory>30</maxHistory>     
+     	</rollingPolicy> 
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%date{yyyy-MM-dd hh:mm} %-5level %logger{10} - %msg%n</pattern>
+		</layout>
+ 	</appender> 
+	<logger name="com.braker">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="com.ponyjava">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="org.springframework">
+		<level value="WARN" />
+	</logger>
+	<logger name="org.springframework">
+		<level value="INFO" />
+	</logger>
+	<logger name="org.hibernate">
+		<level value="ERROR" />
+	</logger>
+	<root>
+		<level value="WARN" />
+		<appender-ref ref="file" />
+	</root>
+</configuration>
+

@@ -1,0 +1,74 @@
+* {
+  margin: 0; padding: 0;
+}
+body {
+  font-size: 100%;
+}
+.accordion {
+  width: 200px;
+  margin: 20px auto;
+}
+.accordion h1, h2, h3, h4 {
+  cursor: pointer;
+}
+.accordion h1 {
+  padding: 15px 20px;
+  background-color: #333;
+  font-weight: normal;
+  color: #1abc9c;
+  margin-left: -2px;
+}
+.accordion h1:hover {
+  color: #4afcdc;
+}
+.accordion h1:first-child {
+  border-radius: 0 0 0 0;
+}
+.accordion h1:last-of-type {
+  border-radius: 0 0 0 0
+}
+.accordion div, .accordion p {
+  display: none;
+}
+.accordion h2 {
+  padding: 5px 25px;
+  background-color: #1abc9c;
+  color: #333;
+  margin-left: -2px;
+}
+.accordion h2:hover {
+  background-color: #09ab8b;
+}
+.accordion h3 {
+  padding: 5px 30px;
+  background-color: #b94152;
+  color: #ddd; 
+  margin-left: -2px;
+}
+.accordion h3:hover {
+  background-color: #a93142;
+}
+.accordion h4 {
+  padding: 5px 35px;
+  background-color: #ffc25a;
+  font-size: .9rem;
+  color: #af720a; 
+}
+.accordion h4:hover {
+  background-color: #e0b040;
+}
+.accordion p {
+  padding: 5px 30px;
+  background-color: #b94152;
+  font-size: .9rem;
+  color: #ddd; 
+}
+.accordion a {
+  padding: 5px 30px;
+  background-color: #b94152;
+  font-size: .9rem;
+  color: #ddd; 
+}
+.accordion .opened-for-codepen {
+  display: block;
+}

@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* 叶崇晖 2018-8-30 */
+
+body{font-size: 12px;font-family:微软雅黑;}
+ul,li{list-style: none;}
+a:link,a:visited{text-decoration: none;color: #bad5e7;}
+/* textarea{background-color: #f0f5f7;padding: 8px;border: 0;} */
+
+
+.textbox-text[readonly="readonly"]{background-color: #F0F5F7;}
+.textbox-icon-disabled{background-color: #F0F5F7;}
+.style1{color: red;height: 40px;}
+.style2{color: #b1b1b1;height: 40px;}
+.style3{color: #b1b1b1;height: 50px;}
+.style4{color: red;height: 40px;}
+.numberbox .textbox-text {text-align: left;}
+.tabDiv{padding:10px;}
+.ourtable{width: 660px}
+.ourtable tr{height: 40px}
+.ourtable2{font-size: 12px;color: #666666;}
+.td1{width: 105px;}
+.td2{width: 200px;}
+.td3{width: 50px;}
+.trtop{height: 10px;}
+.trbody{height: 30px;}
+.tdstar{width: 110px;}
+.tdstar5{width: 165px;}
+
+/* list页面整体div */
+.list-div{background-color: #f0f5f7;height: 100%;}
+.list-div img{vertical-align:middle}
+/* list页面头部div */
+.list-top{margin: 0 10px 10px 10px;background-color: #fff;border:1px #d9e3e7 solid;}
+/* list页面头部table */
+.top-table{width: 100%;font-size: 12px;height: 40px;}
+.top-table-td1{width: 90px;padding-left: 20px}
+.top-table-td2{width: 140px}
+.top-table-td3{width: 62px;padding-left: 8px}
+.top-table-search{width: 90%;padding-left: 15px}
+.top-table-search1{padding-left: 15px}
+/* list页面表格div */
+.list-table{margin: 0 10px 0 10px;height:440px;border: 1px #d9e3e7 solid;background-color: #ffffff}
+.list-table-tab{margin: 0 10px 0 10px;height:471px;border: 1px #d9e3e7 solid;background-color: #ffffff}
+.list-table2{margin: 0 10px 0 10px;height:410px;border: 1px #d9e3e7 solid;background-color: #ffffff}/* 底部带有文字说明的表格样式 */
+.list-table-tab2{margin: 0 10px 0 10px;height:441px;border: 1px #d9e3e7 solid;background-color: #ffffff}/* 底部带有文字说明的表格样式 */
+
+/*首页快速入口 */
+.ksrk0{float: left;height: 44px;width:4px;border:0}
+.ksrk{margin: 5px 0px 5px 5px;float: left;width: 124px;height: 34px;border:0}
+.ksrkjj{margin: 5px 0px 5px 5px;float: left;width: 43px;height: 34px;border:0}
+.ksrkf{font-size: 12px;color: #ffffff;font-family: '微软雅黑';height: 34px;line-height: 34px;text-align: right;margin-right: 10px}
+
+/*要闻中心通知公告div */
+.tzzd{background-color: #ffffff;border:1px #d9e3e7 solid;height: 198px;
+width:-webkit-calc(50% - 7px);width:-moz-calc(50% - 6px);width:calc(50% - 7px)}
+
+.tzzd table{border: 0px;margin-top: 5px;width: 100%;font-size: 12px;color: #666666;font-family: '微软雅黑';}
+.tzzd table tr{height: 34px;line-height: 34px}
+.tzzd table tr td{border-spacing: 0;width: auto;}
+
+/*待辦div */
+.db{background-color: #ffffff;border:1px #d9e3e7 solid;}
+
+
+/* 跳出页面底色div-----------------新的 */
+.window-div{background-color: #FFFFFF;width: 100%;height: 100%;border: 0;color: #666666;}
+.window-left-div{background:#FFFFFF;border:1px solid #D9E3E7;opacity:1;border-radius:4px;float: left;margin: 20px 15px 30px 30px;}
+.window-title{font-size:14px;font-family:Microsoft YaHei;font-weight:400;width:660px;height:24px;line-height: 24px;color:#005E8A;border: 0;margin: 7px 0px 7px 23px;}
+.window-table{border: 0px;width: 670px;margin-left: 15px;font-size:12px;font-family:Microsoft YaHei;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;}
+.window-table-readonly{background-color: #F0F5F7;}
+.window-table tr{height: 35px;line-height: 35px;}
+.window-table-td1{width: 100px;}
+.window-table-td2{width: 235px;}
+.window-table-td1 p{margin-left: 10px;float: left;}
+.window-tab{margin-left: 22px;}
+.window-right-div{background:#FFFFFF;border:1px solid #D9E3E7;border-radius:4px;float: left;margin: 20px 30px 30px 0px;}
+.window-left-top-div{border: 0px;overflow:auto;height:-webkit-calc(100% - 67px);height:-moz-calc(100% - 67px);height:calc(100% - 67px);}
+.window-left-bottom-div{border: 0px;height: 67px;line-height: 67px;text-align: center;}
+
+/* 跳出页面底色div-------------老的 */
+.win-div{background-color: #f0f5f7;}
+.win-left-div{border: 1px #dce5e9 solid;width: 702px}
+.win-right-div{border: 1px #dce5e9 solid;width: 262px}
+.win-left-top-div{border: 0px;height: 440px;overflow:auto;}
+.win-left-bottom-div{border: 0px;height: 67px;line-height: 67px;text-align: center;}
+
+/* 跳出页面右侧流程和制度div中内容样式 */
+.check-system{margin-left: 20px;width: 220px;border: 0px;height: 100%}
+.check-system-table{background-color: #f0f5f7;width: 220px;}
+.check-system-table tr{height: 22px;line-height: 22px}
+.cstd1{width: 35px;background-color: #ffffff}
+.cstd2{padding-top: 6px;padding-left: 6px}
+.cstd3{padding-left: 6px;font-weight: bold}
+.cstd4{padding-bottom: 6px;padding-left: 6px;}
+
+
+/*---滚动条默认显示样式--*/
+::-webkit-scrollbar-thumb {
+background-color: #e5f0f6;
+height: 50px;
+outline-offset: -2px;
+outline: 2px solid #fff;
+-webkit-border-radius: 15px;
+border: 2px solid #fff;
+}
+	
+/*---鼠标点击滚动条显示样式--*/
+::-webkit-scrollbar-thumb:hover {
+background-color: #cfdde4;
+height: 50px;
+-webkit-border-radius: 15px;
+}
+	
+/*---滚动条大小--*/
+::-webkit-scrollbar {
+width: 16px;
+height: 12px;
+}
+	
+/*---滚动框背景样式--*/
+::-webkit-scrollbar-track-piece {
+background-color: #fff;
+-webkit-border-radius: 0;
+}
+
+
+
+/*张迅的样式*/
+.td-leap{width:50px;}
+.pro_add_deleter{color: blue;}
+.style_must{color:red;width: 6px;}
+.pro_inner_title{font-weight: bold;font-size: 14px;}
+
+.win-left-div-ys{border: 1px #dce5e9 solid;width: 962px}
+.win-right-div-ys{border: 1px #dce5e9 solid;width: 262px}
+.win-left-top-div-ys{border: 0px;height: 490px;overflow:auto;}
+.win-left-bottom-div-ys{border: 0px;height: 67px;line-height: 67px;text-align: center;}
+
+/* .ystable th{border:solid #999999; border-width:0px 1px 1px 0px;}
+.ystable td{border:solid #999999; border-width:0px 1px 1px 0px;} */
+
+.td2-blue{color: blue;font-weight: bold;width: 200px}
+.td2-red{color: red;font-weight: bold;width: 200px}
+
+.td1-ys{width: 150px;}
+.td1-y3{width: 5px;}
+
+
+/* loading样式  */
+.loading{
+	width: 80px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top:20%;
+}
+.loading span{
+	display: inline-block;
+	width: 8px;
+	height: 100%;
+	border-radius: 4px;
+	background: lightgreen;
+	-webkit-animation: load 1s ease infinite;
+	animation: load 1s ease infinite;
+}
+@-webkit-keyframes load{
+	0%,100%{
+		height: 40px;
+		background: lightgreen;
+	}
+	50%{
+		height: 70px;
+		margin: -15px 0;
+		background: lightblue;
+	}
+}
+.loading span:nth-child(2){
+	-webkit-animation-delay:0.2s;
+	animation-delay:0.2s;
+}
+.loading span:nth-child(3){
+	-webkit-animation-delay:0.4s;
+	animation-delay:0.4s;
+}
+.loading span:nth-child(4){
+	-webkit-animation-delay:0.6s;
+	animation-delay:0.6s;
+}
+.loading span:nth-child(5){
+	-webkit-animation-delay:0.8s;
+	animation-delay:0.8s;
+}

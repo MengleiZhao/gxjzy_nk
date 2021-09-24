@@ -1,0 +1,366 @@
+/* @charset "utf-8";
+* 
+{
+	margin:0;
+	padding:0;
+}
+html
+{
+	width:100%;
+	height:100%;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	-webkit-text-size-adjust:none;
+	background:#FFFFFF;
+}
+body
+{
+	padding:5px;
+}
+select
+{
+	height:20px;
+	line-height:20px;
+} */
+.camera_left
+{
+	float:left;
+}
+.freeze
+{
+	position:absolute;
+	text-align:center;
+	background:#343434;
+	color:#FFFFFF;
+	font-size:26px;
+	font-weight:bold;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+}
+.camera_vtop
+{
+	vertical-align:middle;
+	margin-top:-1px;
+}
+/*插件*/
+.camera_plugin
+{
+	width:500px;
+	height:300px;
+}
+fieldset
+{
+	display:block;
+}
+/*本地配置*/
+.camera_localconfig
+{
+	width:480px;
+	padding:10px;
+	border:1px solid #7F9DB9;
+}
+.camera_localconfig .tt
+{
+	width:125px;
+}
+.camera_localconfig .txt
+{
+	width:310px;
+}
+.camera_localconfig .btn
+{
+	width:45px;
+	height:22px;
+	line-height:18px;
+}
+.camera_localconfig .sel
+{
+	width:120px;
+}
+/*登录*/
+.camera_login
+{
+	width:480px;
+	padding:10px;
+	border:1px solid #7F9DB9;	
+}
+.camera_login .tt
+{
+	width:100px;
+	font-size: 12px;
+}
+.camera_login .txt
+{
+	width:130px;
+}
+.camera_login .btn
+{
+	width:45px;
+	height:22px;
+	line-height:18px;
+}
+.camera_login .btn2
+{
+	width:100px;
+	height:22px;
+	line-height:18px;
+}
+.camera_login .sel
+{
+	width:130px;
+}
+.camera_login .sel2
+{
+	width:65px;
+}
+/*数字通道*/
+.camera_ipchannel
+{
+	width:480px;
+	padding:10px;
+	border:1px solid #7F9DB9;	
+}
+.camera_ipchannel .btn
+{
+	width:130px;
+	height:22px;
+	line-height:18px;
+}
+.camera_ipchannel .digitaltdiv
+{
+	height:100px;
+	overflow:hidden;
+	overflow-y:auto;
+	border:1px solid #7F9DB9;
+	font-size:11px;
+}
+.camera_ipchannel .digitalchannellist th, .camera_ipchannel .digitalchannellist td
+{
+	padding:2px;
+	border:1px solid #7F9DB9;
+	border-collapse:collapse;
+	white-space:nowrap;
+}
+/*预览*/
+.camera_preview
+{
+	width:451px;
+	padding:10px;
+	padding-top:0;
+	margin-left:10px;
+	border:1px solid #7F9DB9;
+}
+.camera_preview .tt
+{
+	width:60px;
+}
+.camera_preview .txt
+{
+	width:30px;
+}
+.camera_preview .btn
+{
+	width:70px;
+	height:22px;
+	line-height:18px;
+}
+.camera_preview .btn2
+{
+	width:90px;
+	height:22px;
+	line-height:18px;
+}
+.camera_preview .sel
+{
+	width:105px;
+}
+/*云台*/
+.camera_ptz
+{
+	width:450px;
+	padding:10px;
+	margin-left:10px;
+	border:1px solid #7F9DB9;
+}
+.camera_ptz .tt
+{
+	width:60px;
+}
+.camera_ptz .txt
+{
+	width:60px;
+}
+.camera_ptz .btn
+{
+	width:45px;
+	height:22px;
+	line-height:18px;
+}
+.camera_ptz .btn2
+{
+    width:60px;
+    height:22px;
+    line-height:18px;
+}
+.camera_ptz .sel
+{
+	width:65px;
+}
+/*视频参数*/
+.camera_videoparam
+{
+	width:450px;
+	padding:10px;
+	margin-left:10px;
+	border:1px solid #7F9DB9;
+}
+.camera_videoparam .tt
+{
+	width:60px;
+}
+.camera_videoparam .txt
+{
+	width:60px;
+}
+.camera_videoparam .btn
+{
+	width:45px;
+	height:22px;
+	line-height:18px;
+}
+.camera_videoparam .sel
+{
+	width:65px;
+}
+/*回放*/
+.camera_playback
+{
+	width:450px;
+	padding:10px;
+	margin-left:10px;
+	border:1px solid #7F9DB9;
+}
+.camera_playback .tt
+{
+	width:60px;
+}
+.camera_playback .txt
+{
+	width:140px;
+}
+.camera_playback .btn
+{
+	width:45px;
+	height:22px;
+	line-height:18px;
+}
+.camera_playback .btn2
+{
+	width:70px;
+	height:22px;
+	line-height:18px;
+}
+.camera_playback .sel
+{
+	width:65px;
+}
+.camera_playback .searchdiv
+{
+	height:100px;
+	overflow:hidden;
+	overflow-y:auto;
+	border:1px solid #7F9DB9;
+	font-size:11px;
+}
+.camera_playback .searchlist th, .camera_playback .searchlist td
+{
+	padding:2px;
+	border:1px solid #7F9DB9;
+	border-collapse:collapse;
+	white-space:nowrap;
+}
+/*系统维护*/
+.camera_maintain
+{
+	width:450px;
+	padding:10px;
+	margin-left:10px;
+	border:1px solid #7F9DB9;
+}
+.camera_maintain .tt
+{
+	width:60px;
+}
+.camera_maintain .txt
+{
+	width:280px;
+}
+.camera_maintain .btn
+{
+	width:45px;
+	height:22px;
+	line-height:18px;
+}
+.camera_maintain .btn2
+{
+	width:100px;
+	height:22px;
+	line-height:18px;
+}
+.camera_maintain .sel
+{
+	width:65px;
+}
+/*操作信息*/
+.camera_operate
+{
+	width:450px;
+	padding:10px;
+	margin-left:10px;
+	border:1px solid #7F9DB9;
+}
+.camera_operate .opinfo
+{
+	height:197px;
+	border:1px solid #7F9DB9;
+	overflow:auto;
+}
+/*事件回调*/
+.camera_callback
+{
+	width:450px;
+	padding:10px;
+	margin-left:10px;
+	border:1px solid #7F9DB9;
+}
+.camera_callback .cbinfo
+{
+	height:114px;
+	border:1px solid #7F9DB9;
+	overflow:auto;
+}
+/*IP解析*/
+.camera_ipparse
+{
+	width:480px;
+	padding:10px;
+	border:1px solid #7F9DB9;	
+}
+.camera_ipparse .tt
+{
+	width:100px;
+}
+.camera_ipparse .txt
+{
+	width:130px;
+}
+.camera_ipparse .btn
+{
+	width:90px;
+	height:22px;
+	line-height:18px;
+}
+.camera_ipparse .sel
+{
+	width:130px;
+}

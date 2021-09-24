@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<dbs>
+	<db name="dh">
+		<databasedriver>com.mysql.jdbc.Driver</databasedriver>
+		<dburl>jdbc:mysql://172.16.243.24:3306/nkdemo_utf8?autoReconnectForPools=true</dburl>
+		<username>root</username>
+		<password>123</password>
+	</db>
+</dbs>
+

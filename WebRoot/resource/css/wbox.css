@@ -1,0 +1,114 @@
+#wBox .b {
+background-image:url(../images/wbox.png); 
+}
+
+#wBox {
+  position:absolute;
+  top:0;
+  left:50px;
+  z-index: 100;
+  text-align: left;
+}
+
+#wBox .popup {
+  position: relative;
+}
+
+#wBox table {
+  border-collapse: collapse;
+}
+
+#wBox td {
+  border-bottom: 0;
+  padding: 0;
+}
+
+#wBox .body {
+  width:370px;
+}
+
+#wBox .loading,#wBox .image  {
+  text-align: center;
+}
+
+#wBox img {
+  border: 0;
+  margin: 0;
+}
+
+#wBox .title {
+  height:30px; margin-bottom:8px;
+  line-height:30px;
+  color:#2a55b8;
+  font-size:15px; font-weight:bold;
+  width:100%;
+  background:#b9d2f8;
+}
+#wBox .title .itemTitle{
+	padding-left:15px;
+	padding-top:5px;
+	overflow:hidden;
+}
+#wBox .title .close{
+    background:url(../images/close.jpg) no-repeat 0 0;
+    height:16px;
+    width:17px;
+    overflow:hidden;
+    cursor:pointer;
+	margin-top:5px;
+}
+#wBox .title .on{
+   background:url(../images/close.jpg) no-repeat 0 0;
+}
+#wBox .tl, #wBox .tr, #wBox .bl, #wBox .br {
+  height: 10px;
+  width: 10px;
+  overflow: hidden;
+  background-image:url(../images/wbox.png);
+  padding: 0;
+}
+#wBox .body{
+	background-color:#ffffff;
+}
+#wBox .imgBTN{
+	height:100%;
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+	z-index:10;
+}
+#wBox .wBox_loading{	
+	text-align:center;	
+}
+#wBox #imgPrev,#wBox #imgNext{
+	width:49%;
+	display:block;
+	height:99%;
+}
+#wBox #imgPrev{
+	float:left;
+	background: url("../images/btn-prev.gif") no-repeat 0% 45%;
+}
+#wBox #imgNext{
+	float:right;
+	background: url("../images/btn-next.gif") no-repeat right 45%;
+}
+#wBox_overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+}
+
+
+.wBox_hide {
+  z-index:-100;
+}
+
+.wBox_overlayBG {
+  background-color: #000;
+  z-index: 99;
+}
+
